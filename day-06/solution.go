@@ -1,13 +1,13 @@
 package main
 
 import (
-	commons_io "commons"
+	cio "commons"
 	"strconv"
 	"strings"
 )
 
 func main() {
-	line := commons_io.ReadLines("day-06/input.txt")[0]
+	line := cio.ReadLines("day-06/input.txt")[0]
 	chars := strings.Split(line, ",")
 
 	fishAges := make([]int64, len(chars))

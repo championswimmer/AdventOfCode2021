@@ -1,12 +1,12 @@
 package main
 
 import (
-	commons_io "commons"
+	cio "commons"
 	"strconv"
 )
 
 func main() {
-	lines := commons_io.ReadLines("day-01/input.txt")
+	lines := cio.ReadLines("day-01/input.txt")
 	nums := make([]int, len(lines))
 	for i, line := range lines {
 		n, err := strconv.Atoi(line)

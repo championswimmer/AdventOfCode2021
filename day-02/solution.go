@@ -1,14 +1,14 @@
 package main
 
 import (
-	commons_io "commons"
+	cio "commons"
 	"fmt"
 	"strconv"
 	"strings"
 )
 
 func main() {
-	lines := commons_io.ReadLines("day-02/input.txt")
+	lines := cio.ReadLines("day-02/input.txt")
 	aim := 0
 	depth := 0
 	hPos := 0
