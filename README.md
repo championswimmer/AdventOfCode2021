@@ -1,5 +1,5 @@
 # Advent of Code 2021 
-All solutions in `Rust`, `Go` and `Kotlin` 
+All solutions in `Rust`, `Go`, `TypeScript` and `Kotlin` 
 
 ## Running
 
@@ -27,6 +27,9 @@ then install the rust-script crate.
 ```shell
 cargo install rust-script
 ```
+
+### TypeScript
+The TypeScript files are run via [ts-node]()
 
 ### Go 
 The Go files are run via Go's own `go run` process which can 

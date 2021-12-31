@@ -2,7 +2,6 @@
 
 import aoc.commons.readLines
 
-
 fun main() {
     val lines = readLines("day-01/input.txt")
     val nums = lines.map { it.toInt() }
