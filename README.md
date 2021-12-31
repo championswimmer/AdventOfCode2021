@@ -31,7 +31,7 @@ cargo install rust-script
 ### TypeScript
 The TypeScript files are run via [deno](https://deno.land/)
 
-Install Deno via appropriate package manager for your OS.
+[Install Deno](https://deno.land/manual/getting_started/installation) via appropriate package manager for your OS.
 
 
 ```shell
