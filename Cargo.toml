@@ -8,3 +8,7 @@ commons = { path = "commons"}
 [[bin]]
 name ="day01"
 path = "./day-01/solution.rs"
+
+[[bin]]
+name ="day02"
+path = "./day-02/solution.rs"

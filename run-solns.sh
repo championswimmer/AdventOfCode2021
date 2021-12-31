@@ -10,6 +10,7 @@ kscript day-02/solution.kt
 
 # run rust solutions
 rust-script day-01/solution.rs
+rust-script day-02/solution.rs
 
 # run typescript solutions
 deno run -A day-01/solution.ts
