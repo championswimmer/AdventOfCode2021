@@ -1,4 +1,4 @@
-import {readLines} from "../commons/io";
+import { readLines } from "../commons/io.ts";
 
 function main() {
     const lines = readLines("day-01/input.txt");
