@@ -1,8 +1,8 @@
 // cargo-deps: commons = { path = "../commons" }
 fn main() {
-    let lines = io::read_lines("day-01/input.txt").unwrap();
-    let nums = lines
-        .map(|line| line.unwrap().parse::<i32>().unwrap())
+    let lines = io::read_lines("day-01/input.txt");
+    let nums = lines.iter()
+        .map(|line| line.parse::<i32>().unwrap())
         .collect::<Vec<i32>>();
     let mut threesums: Vec<i32> = vec![0; nums.len() - 2];
     for i in 0..threesums.len() {
