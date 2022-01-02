@@ -48,11 +48,6 @@ The TypeScript files are run via [deno](https://deno.land/)
 
 [Install Deno](https://deno.land/manual/getting_started/installation) via appropriate package manager for your OS.
 
-
-```shell
-npm install ts-node
-```
-
 ### Go 
 The Go files are run via Go's own `go run` process which can 
 run a file like a script. 
