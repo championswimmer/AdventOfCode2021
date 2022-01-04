@@ -1,9 +1,7 @@
-@file:Include("../commons/io.kt")
-
-import aoc.commons.readLines
+@file:Include("../commons/io.kts")
 
 fun main () {
-    val line = readLines("day-07/input.txt")[0]
+    val line: String = readLines("day-07/input.txt")[0]
     val crabPositions = line.split(",").map { it.toInt() }.sorted()
     val finalPos = crabPositions.get(crabPositions.size/ 2)
 
@@ -26,3 +24,4 @@ fun main () {
 
     println(Math.min(fuelUsedFloor.toLong(), fuelUsedCeil.toLong()))
 }
+main()

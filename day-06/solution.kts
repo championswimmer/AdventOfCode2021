@@ -1,10 +1,8 @@
-@file:Include("../commons/io.kt")
-
-import aoc.commons.readLines
+@file:Include("../commons/io.kts")
 import java.math.BigInteger
 
 fun main() {
-    val line = readLines("day-06/input.txt")[0]
+    val line: String = readLines("day-06/input.txt")[0]
     // val line = "3,4,3,1,2"
     val fishAges = line.split(",").map { it.toInt() }
     val fishAgeBuckets = Array(9) { 0L }
@@ -26,3 +24,4 @@ fun main() {
     }
     println(fishAgeBuckets.sum())
 }
+main()

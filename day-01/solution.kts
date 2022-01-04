@@ -1,9 +1,7 @@
-@file:Include("../commons/io.kt")
-
-import aoc.commons.readLines
+@file:Include("../commons/io.kts")
 
 fun main() {
-    val lines = readLines("day-01/input.txt")
+    val lines: List<String> = readLines("day-01/input.txt")
     val nums = lines.map { it.toInt() }
     val threesums = Array(nums.size - 2) { 0 }
     for (i in 0 until threesums.size) {
@@ -17,3 +15,4 @@ fun main() {
     }
     println(count)
 }
+main()

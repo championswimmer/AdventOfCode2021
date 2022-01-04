@@ -1,6 +1,4 @@
-@file:Include("../commons/io.kt")
-
-import aoc.commons.readLines
+@file:Include("../commons/io.kts")
 
 fun part1(lines: List<String>): Int {
     val rays = lines[0].length
@@ -22,8 +20,9 @@ fun part1(lines: List<String>): Int {
 }
 
 fun main() {
-    val lines = readLines("day-03/input.txt")
+    val lines: List<String> = readLines("day-03/input.txt")
     // part 1
     val powerRating = part1(lines)
     println(powerRating)
 }
+main()

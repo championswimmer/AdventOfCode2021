@@ -1,6 +1,4 @@
-@file:Include("../commons/io.kt")
-
-import aoc.commons.readLines
+@file:Import("../commons/io.kts")
 
 fun findLowPoints(heights: List<List<Int>>): List<Pair<Int, Int>> {
     val lowPoints: MutableList<Pair<Int, Int>> = mutableListOf()
@@ -32,3 +30,4 @@ fun main() {
     println(riskSum)
     findBasins(lowPoints)
 }
+main()
