@@ -5,8 +5,8 @@
 #go run day-02/solution.go
 #
 ## run kotlin solutions
-#kscript day-01/solution.kt
-#kscript day-02/solution.kt
+#kscript day-01/solution.kts
+#kscript day-02/solution.kts
 #
 ## run rust solutions
 #rust-script day-01/solution.rs
@@ -27,7 +27,7 @@ solve() {
       ;;
     "kt" | "kotlin")
       RUN_CMD="kscript"
-      EXT=".kt"
+      EXT=".kts"
       ;;
     "rs" | "rust")
       RUN_CMD="rust-script"

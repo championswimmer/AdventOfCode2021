@@ -21,11 +21,10 @@ fun findLowPoints(heights: List<List<Int>>): List<Pair<Int, Int>> {
 }
 
 fun findBasins(lowPoints: List<Pair<Int, Int>>) {
-    
 }
 
 fun main() {
-    val lines = readLines("day-09/input.txt")
+    val lines: List<String> = readLines("day-09/input.txt")
     val heights = lines.map { it.split("").filter { it.isNotBlank() }.map { it.toInt() } }
 
     val lowPoints = findLowPoints(heights)
