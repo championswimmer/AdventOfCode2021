@@ -1,4 +1,4 @@
-package aoc.commons
+ package aoc.commons
 
 import java.io.File
 

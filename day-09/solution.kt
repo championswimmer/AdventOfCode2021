@@ -1,4 +1,4 @@
-//INCLUDE ../commons/io.kt
+@file:Include("../commons/io.kt")
 
 import aoc.commons.readLines
 
