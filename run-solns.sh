@@ -1,20 +1,4 @@
-#!/usr/bin/env sh 
-
-## run go solutions
-#go run day-01/solution.go
-#go run day-02/solution.go
-#
-## run kotlin solutions
-#kscript day-01/solution.kts
-#kscript day-02/solution.kts
-#
-## run rust solutions
-#rust-script day-01/solution.rs
-#rust-script day-02/solution.rs
-#
-## run typescript solutions
-#deno run -A day-01/solution.ts
-#deno run -A day-02/solution.ts
+#!/usr/bin/env sh
 
 solve() {
     LANG=$1
@@ -43,16 +27,34 @@ solve() {
     time $RUN_CMD day-"$DAY"/solution$EXT
 }
 
-if [ -z "$1" ]
+LANG=$1
+DAY=$2
+
+if [ -z "$LANG" ]
   then
-    echo "No language specified"
-    exit 1
+    read -p "Which language? (go, kotlin, rust, typescript) " LANG
 fi
 
-if [ -z "$2" ]
+if [ -z "$DAY" ]
   then
-    echo "No day specified"
-    exit 1
+    read -p "Which day? (01, 02, ... 25) " DAY
 fi
 
-solve "$1" "$2"
+solve "$LANG" "$DAY"
+
+
+## run go solutions
+#go run day-01/solution.go
+#go run day-02/solution.go
+#
+## run kotlin solutions
+#kscript day-01/solution.kts
+#kscript day-02/solution.kts
+#
+## run rust solutions
+#rust-script day-01/solution.rs
+#rust-script day-02/solution.rs
+#
+## run typescript solutions
+#deno run -A day-01/solution.ts
+#deno run -A day-02/solution.ts
