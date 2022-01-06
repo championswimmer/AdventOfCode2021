@@ -32,12 +32,14 @@ DAY=$2
 
 if [ -z "$LANG" ]
   then
-    read -p "Which language? (go, kotlin, rust, typescript) " LANG
+    echo "Which language? (go, kotlin, rust, typescript) "
+    read LANG
 fi
 
 if [ -z "$DAY" ]
   then
-    read -p "Which day? (01, 02, ... 25) " DAY
+    echo "Which day? (01, 02, ... 25) "
+    read DAY
 fi
 
 solve "$LANG" "$DAY"
