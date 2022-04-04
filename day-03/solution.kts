@@ -16,6 +16,10 @@ fun part1(lines: List<String>): Int {
     
     val gammaPower = (gammaRate.joinToString("").toInt(2))
     val epsilonPower = (epsilonRate.joinToString("").toInt(2))
+
+    println(gammaPower)
+    println(epsilonPower)
+
     return (gammaPower * epsilonPower)
 }
 
