@@ -1,10 +1,10 @@
+use std::fs;
 use std::fs::File;
-use std::io::{self, BufRead};
 
 pub fn read_lines(filename: &str) -> Vec<String> {
-    let file = File::open(filename).expect("Unable to open file");
-    let lines = io::BufReader::new(file).lines()
+    let data = fs::read_to_string(filename).expect("Failed to read file");
+    let lines = data.lines()
         .map(|l| l.unwrap())
         .collect::<Vec<String>>();
-    return lines
+    return lines;
 }

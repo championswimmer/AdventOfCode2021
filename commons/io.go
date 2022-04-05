@@ -1,24 +1,16 @@
 package cio
 
 import (
-	"bufio"
-	"log"
+	"fmt"
 	"os"
+	"strings"
 )
 
 func ReadLines(path string) []string {
-	file, err := os.Open(path)
+	data, err := os.ReadFile(path)
 	if err != nil {
-		log.Fatalf("failed opening file: %s", err)
-	}
-	scanner := bufio.NewScanner(file)
-	scanner.Split(bufio.ScanLines)
-	var txtlines []string
-
-	for scanner.Scan() {
-		txtlines = append(txtlines, scanner.Text())
+		panic(fmt.Errorf("read file %s error: %s", path, err))
 	}
 
-	file.Close()
-	return txtlines
+	return strings.Split(string(data), "\n")
 }

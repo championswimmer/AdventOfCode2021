@@ -11,7 +11,6 @@ function part1(lines: Array<string>): number {
       if (char === "1") rayVals[index]++;
     });
   });
-
   const gammaRate = rayVals.map((val) => (val > points / 2) ? 1 : 0);
   const epsilonRate = rayVals.map((val) => (val < points / 2) ? 1 : 0);
 
@@ -21,7 +20,6 @@ function part1(lines: Array<string>): number {
   console.log(gammaPower);
   console.log(epsilonPower);
 
-
   return gammaPower * epsilonPower;
 }
 
@@ -30,7 +28,6 @@ function main() {
 
   const powerRating = part1(lines);
   console.log(powerRating);
-
 }
 
 main();
