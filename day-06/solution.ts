@@ -1,17 +1,16 @@
-@file:Include("../commons/io.kts")
+import { readLines } from "../commons/io.ts";
 
-import java.math.BigInteger
+function main() {
+    const line = readLines("day-06/input.txt")[0];
+    const fishAges = line.split("").map(Number);
+    const fishAgeBuckets = new Array(9).fill(0);
 
-fun main() {
-    val line: String = readLines("day-06/input.txt")[0]
-    // val line = "3,4,3,1,2"
-    val fishAges = line.split(",").map { it.toInt() }
-    val fishAgeBuckets = Array(9) { 0L }
+    fishAges.forEach(age => {
+        fishAgeBuckets[age] += 1;
+    });
 
-    fishAges.forEach { age -> fishAgeBuckets[age]++ }
-
-    for (i in 0..255) {
-        val zeroAgeFish = fishAgeBuckets[0]
+    for (let i = 0; i <= 255; i++) {
+        const zeroAgeFish = fishAgeBuckets[0]
         fishAgeBuckets[0] = fishAgeBuckets[1]
         fishAgeBuckets[1] = fishAgeBuckets[2]
         fishAgeBuckets[2] = fishAgeBuckets[3]
@@ -21,8 +20,8 @@ fun main() {
         fishAgeBuckets[6] = fishAgeBuckets[7] + zeroAgeFish
         fishAgeBuckets[7] = fishAgeBuckets[8]
         fishAgeBuckets[8] = zeroAgeFish
-
     }
-    println(fishAgeBuckets.sum())
+    console.log(fishAgeBuckets.reduce((a, b) => a + b));
 }
+
 main()
